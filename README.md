@@ -128,7 +128,7 @@ $$
 
 $$
 \boxed{
-\Omega_n=\frac{\operatorname{unwrap}(\phi_{\mathrm{raw}}-\phi_{\mathrm{bias}})}{K_{\phi,\mathrm{meas}}}
+\Omega_n=\frac{\mathrm{unwrap}(\phi_{\mathrm{raw}}-\phi_{\mathrm{bias}})}{K_{\phi,\mathrm{meas}}}
 }
 $$
 
@@ -275,7 +275,7 @@ $$
 $$
 \boxed{
 \phi_{\mathrm{raw}}=
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 \sqrt{3}(J_2-J_1),
 2J_0-J_1-J_2
@@ -296,7 +296,7 @@ $$
 
 $$
 \boldsymbol{q}=M^{+}(\boldsymbol{v}-\boldsymbol{b}),\qquad
-\phi_{\mathrm{raw}}=\operatorname{atan2}(q_y,q_x)
+\phi_{\mathrm{raw}}=\mathrm{atan2}(q_y,q_x)
 $$
 
 とする。ここで $M^{+}$ は校正行列の擬似逆行列である。上の理想式は、実測した $M$ が理想形に十分近いかを確認するための簡易式として使う。
@@ -304,7 +304,7 @@ $$
 角速度へ変換する前に、静的位相バイアスを補正し、主値の折り返しをアンラップする。
 
 $$
-\Delta\phi_{\mathrm{S}}=\operatorname{unwrap}(\phi_{\mathrm{raw}}-\phi_{\mathrm{bias}})
+\Delta\phi_{\mathrm{S}}=\mathrm{unwrap}(\phi_{\mathrm{raw}}-\phi_{\mathrm{bias}})
 $$
 
 $$
@@ -618,8 +618,8 @@ $$
 3×3版では、生の三チャンネル値の平均を位相オフセットとして差し引かない。まずオフセット・ゲイン・位相関係を補正して $\phi_{\mathrm{raw}}$ を求め、短時間の静止データから円平均
 
 $$
-\phi_{\mathrm{bias}}=\operatorname{atan2}\left(\operatorname{mean}(\sin\phi_{\mathrm{raw}}),
-\operatorname{mean}(\cos\phi_{\mathrm{raw}})\right)
+\phi_{\mathrm{bias}}=\mathrm{atan2}\left(\mathrm{mean}(\sin\phi_{\mathrm{raw}}),
+\mathrm{mean}(\cos\phi_{\mathrm{raw}})\right)
 $$
 
 を求める。静止時の標準偏差またはRMSも記録する。ここでのゼロは、設置姿勢、地球自転、機械台の残留回転を含む装置上の相対ゼロである。
